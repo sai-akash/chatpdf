@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat PDF App</title>
+</head>
+<body>
+    <h1>Chat PDF App</h1>
+    <form method="post" action="/" enctype="multipart/form-data">
+        <label for="pdf">Upload PDF:</label>
+        <input type="file" name="pdf" accept=".pdf" required>
+        <br>
+        <label for="question">Ask a Question:</label>
+        <input type="text" name="question" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if answer %}
+    <h2>Answer:</h2>
+    <p>{{ answer }}</p>
+    {% endif %}
+</body>
+</html>
