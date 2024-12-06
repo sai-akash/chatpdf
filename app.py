@@ -9,6 +9,7 @@ app = Flask(__name__)
 qa_model = pipeline("question-answering", model="bert-large-uncased-whole-word-masking-finetuned-squad")
 
 @app.route("/", methods=["GET", "POST"])
+#define function
 def index():
     if request.method == "POST":
         uploaded_file = request.files["pdf"]
